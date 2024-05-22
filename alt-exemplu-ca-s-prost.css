@@ -1,0 +1,24 @@
+.corp{
+    background-color: black;
+}
+.paragraf{
+    color: white;  
+    font-size: 30px;
+    margin-left: 50px; 
+}
+.pula{
+    border-width: 1px;
+    background-color: rgb(7, 41, 41);    
+    border-color: white;
+    width: 300px;
+    height: 70px;
+    margin-left: 30px;
+    margin-top: 50px;
+    border-style: solid;
+    color: white;
+}
+.pula:hover{
+    background-color: transparent;
+    color: white;
+    transition: 0.4s;
+}

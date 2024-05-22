@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alt exemplu ca s prost si am gresit</title>    
+        <link rel="stylesheet" href="alt-exemplu-ca-s-prost.css">    
+    </head>
+    <body class="corp">
+        <p class="paragraf">Alt exemplu ca s prost si am gresit</p>
+
+        <button class="pula" onclick="
+        const rezultat = pickmate ();        
+        playGame ('cap');
+        ">Cap</button>
+
+        <button class="pula" onclick="
+        playGame ('pajura') ;
+        ">Pajura</button>
+
+        <script>   
+        function playGame (playerMove) {              
+
+        const rezultat = pickmate ();
+
+        pickrezultatfinal ();
+
+        if (playerMove === 'pajura') {
+            if (rezultat === 'cap') {
+            rezultatfinal = 'Ai pierdut'            
+        } else if (rezultat === 'pajura') {
+            rezultatfinal = 'Ai castigat'
+        }
+
+        } else if (playerMove === 'cap') {
+            pickrezultatfinal ();       
+        if (rezultat === 'cap') {
+            rezultatfinal = 'Ai castigat'            
+        } else if (rezultat === 'pajura') {
+            rezultatfinal = 'Ai pierdut'
+        }
+        }
+        
+        alert (`Ai ales ${playerMove}, calculatorul a ales ${rezultat},${rezultatfinal}`)
+        }
+        
+        function pickmate() {
+            const mate = Math.random();  
+            
+            let rezultat = '';
+
+        if (mate >= 0 && mate < 1/2) {
+            rezultat = 'cap'
+        }       else if (mate >= 1/2 && mate <= 1) {
+            rezultat = 'pajura'
+        }
+           return rezultat;     
+        }
+        function pickrezultatfinal () {
+            let rezultatfinal = '';
+        }
+        </script>
+    </body>
+</html>
